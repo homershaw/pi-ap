@@ -17,20 +17,20 @@ REPONAME='pi-ap'
 
 # Ensure all hostnames are UNIQUE:
 # If using "pi-ap" to configure other APs on your LAN change default hostname by at least incrementing number in name ie: "3bplus-ap2" as you add them
-OURHOSTNAME='3bplus-ap1'
-OURDOMAIN='f1linux.com'
+OURHOSTNAME='wtd'
+OURDOMAIN='local'
 
 ### AP Variables:
 
 # DHCP Pool will be derived from the IP and mask specified in "IPV4IPWLAN0" variable. If larger pool of addresses required use a wider mask than a /28
 # ** Ensure that this subnet specified below is not already used on your network **
-IPV4IPWLAN0='192.168.0.1/28'
+IPV4IPWLAN0='192.168.5.1/28'
 #IPV6IPWLAN0="$(ip -6 addr|awk '{print $2}'|grep -P '^(?!fe80)[[:alnum:]]{4}:.*/64'|cut -d '/' -f1)"
 
 # NOTE: Both Hyphens and underscores are valid characters for use in an SSID
-SSIDNAME='RPI-AP1'
+SSIDNAME='Outlaw'
 # Password must be min 8 characters and must NOT include single quotes- these are used as delimiters to encase the password so other special characters do not expand in bash
-APWPA2PASSWD='cH4nG3M3'
+APWPA2PASSWD='scada3336'
 
 # Default port systemd-resolved start on '5353' collides with dnsmasq (which does DHCP for WiFi clients) which also uses '5353' as its default port.
 # I chose 5454 but that number is arbitrary: if you have another process which listens on port 5454 feel free to change it to a different value
